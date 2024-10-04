@@ -12,3 +12,8 @@ on:
 jobs:
   snap:
     uses: canonical/robotics-actions-workflows/.github/workflows/snap.yaml@fix/refactor
+    with:
+      snap-test-script: |
+        #!/bin/sh
+        set -euxo pipefail
+        hello-snap | grep "Hello World"
