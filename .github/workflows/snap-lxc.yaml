@@ -1,4 +1,4 @@
-name: snap
+name: snap-lxc
 
 on:
   push:
