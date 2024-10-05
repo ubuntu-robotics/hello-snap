@@ -1,0 +1,25 @@
+name: multi-snap
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  snap:
+    uses: canonical/robotics-actions-workflows/.github/workflows/snap.yaml@fix/refactor-matrix
+    with:
+      lxc-image: 'ubuntu:24.04'
+      snapcraft-source-subdir: '[".", "bar", "foo"]'
+      snap-test-script: |
+        #!/bin/sh
+        set -euxo pipefail
+        hello-snap | grep "Hello World"
+        hello-foo | grep "Hello Foo"
+        hello-bar | grep "Hello Bar"
+    secrets:
+      snapstore-login: "secret"
