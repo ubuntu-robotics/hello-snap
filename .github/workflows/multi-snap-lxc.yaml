@@ -1,4 +1,4 @@
-name: multi-snap
+name: multi-snap-lxc
 
 on:
   push:
