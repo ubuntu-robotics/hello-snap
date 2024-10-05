@@ -18,3 +18,5 @@ jobs:
         #!/bin/sh
         set -euxo pipefail
         hello-snap | grep "Hello World"
+    secrets:
+      snapstore-login: "secret"
