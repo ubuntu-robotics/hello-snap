@@ -20,3 +20,5 @@ jobs:
         hello-snap | grep "Hello World"
         hello-foo | grep "Hello Foo"
         hello-bar | grep "Hello Bar"
+    secrets:
+      snapstore-login: "secret"
