@@ -11,7 +11,7 @@ on:
 
 jobs:
   snap:
-    uses: canonical/robotics-actions-workflows/.github/workflows/snap.yaml@fix/refactor
+    uses: canonical/robotics-actions-workflows/.github/workflows/snap.yaml@fix/refactor-matrix
     with:
       snapcraft-source-subdir: '[".", "bar", "foo"]'
       snap-test-script: |
