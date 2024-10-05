@@ -1,0 +1,17 @@
+name: hello-foo
+base: core22
+version: '0.1.0'
+summary: Demo snap
+description: Demo snap
+
+grade: stable
+confinement: strict
+
+apps:
+  hello-foo:
+    command: hello.sh
+
+parts:
+  hello:
+    source: .
+    plugin: dump

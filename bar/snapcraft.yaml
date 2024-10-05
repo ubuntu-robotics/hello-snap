@@ -1,0 +1,17 @@
+name: hello-bar
+base: core24
+version: '0.1.0'
+summary: Demo snap
+description: Demo snap
+
+grade: stable
+confinement: strict
+
+apps:
+  hello-bar:
+    command: hello.sh
+
+parts:
+  hello:
+    source: .
+    plugin: dump
